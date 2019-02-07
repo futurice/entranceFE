@@ -10,7 +10,6 @@ class AddMeeting extends Component {
 				host: '',
 				phone: '',
 				meeting: '',
-				room: '',
 				date: this.newDateToString()
 			},
 			added: false
@@ -32,10 +31,6 @@ class AddMeeting extends Component {
 					<div>
 						<p className="add-meeting-label"> Meeting name? </p>
 						<input id="meeting" className="add-meeting-input" value={this.state.meeting.meeting} onChange={evt => this.updateMeeting(evt)}/>
-					</div>
-					<div>
-						<p className="add-meeting-label"> Meeting room? </p>
-						<input id="room" className="add-meeting-input" value={this.state.meeting.room} onChange={evt => this.updateMeeting(evt)}/>
 					</div>
 					<div>
 						<p className="add-meeting-label"> Date/time ? </p>
@@ -67,7 +62,6 @@ class AddMeeting extends Component {
 			case 'host': meeting.host = evt.target.value; break;
 			case 'phone': meeting.phone = evt.target.value; break;
 			case 'meeting': meeting.meeting = evt.target.value; break;
-			case 'room': meeting.room = evt.target.value; break;
 			case 'datetime-local': meeting.date = evt.target.value; break;
 		}
 		this.setState({ meeting });
@@ -86,7 +80,6 @@ class AddMeeting extends Component {
 					host: '',
 					phone: '',
 					meeting: '',
-					room: '',
 					date: this.newDateToString()
 				}
 			})
