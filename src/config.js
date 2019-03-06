@@ -24,4 +24,7 @@ export default {
   backend: {
     url: env('BACKEND_URL', 'http://localhost:8000'),
   },
+  debug: {
+    http: process.env.NODE_ENV === 'development',
+  },
 };
