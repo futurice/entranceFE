@@ -30,7 +30,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "npm run prettier",
+      "prettier",
       "git add"
     ]
   },
