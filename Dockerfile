@@ -3,7 +3,8 @@ FROM node:10-alpine AS builder
 WORKDIR /opt/app
 COPY package.json yarn.lock ./
 RUN yarn
-COPY . .
+COPY src src
+COPY public public
 RUN yarn build
 
 # --- Expose using Nginx
