@@ -3,7 +3,8 @@ FROM node:10-alpine AS builder
 WORKDIR /opt/app
 COPY package.json yarn.lock ./
 RUN yarn
-COPY . .
+COPY src src
+COPY public public
 RUN yarn build
 
 # --- Expose using Nginx
@@ -17,7 +18,7 @@ RUN wget -O dockerize.tar.gz https://github.com/jwilder/dockerize/releases/downl
   && tar -C /usr/local/bin -xzvf dockerize.tar.gz \
   && rm dockerize.tar.gz
 
-COPY nginx.conf.tpl /etc/nginx/conf.d/default.conf.tpl
+COPY .docker/default.conf.tpl /etc/nginx/conf.d/default.conf.tpl
 COPY --from=builder /opt/app/build/ /usr/share/nginx/html
 
 CMD dockerize -template /etc/nginx/conf.d/default.conf.tpl:/etc/nginx/conf.d/default.conf nginx -g 'daemon off;'
