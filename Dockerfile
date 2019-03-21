@@ -5,6 +5,7 @@ COPY package.json yarn.lock ./
 RUN yarn
 COPY src src
 COPY public public
+COPY .env.production ./
 RUN yarn build
 
 # --- Expose using Nginx
