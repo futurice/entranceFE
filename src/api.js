@@ -28,10 +28,16 @@ const post = (path, obj) =>
     body: JSON.stringify(obj),
   });
 
+const deleteMeeting = path =>
+  _fetch(path, {
+    method: 'delete',
+  });
+
 // --- API Endpoints
 const Meetings = {
   add: meeting => post('/meetings', meeting),
   list: () => get('/meetings'),
+  delete: id => deleteMeeting('/meetings/' + id),
 };
 
 // --- Default Export

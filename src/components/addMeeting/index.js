@@ -100,7 +100,6 @@ class AddMeeting extends Component {
 
   addMeeting(event) {
     event.preventDefault();
-    console.log(this.state);
     Api.Meetings.add(this.state.meeting).then(() => {
       this.setState({
         meeting: {
@@ -110,6 +109,7 @@ class AddMeeting extends Component {
           date: this.newDateToString(),
         },
       });
+      this.props.getData();
     });
   }
 
