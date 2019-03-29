@@ -1,15 +1,24 @@
 .meeting-list-wrapper {
     width: 100%;
-    height: 100%
+    height: 100%;
+    margin-top: 50px;
+    border-top: 1px solid #2D9E47;
+    padding-top: 50px;
+}
+.meeting-list {
+    display: flex;
+    justify-content: center;
 }
 .list-item {
+    position: relative;
     background-color: #2D9E47;
     padding: 20px;
     min-width: 250px;
     height: 100px;
-    margin: 5px;
+    margin: 10px;
     border-radius: 5px;
     border: 3px solid #a3f307;
+    width: 300px;
 }
 .list-host {
     font-size: 18px;
@@ -17,6 +26,30 @@
     color: #000;
     margin-bottom: 5px;
 }
+.list-name {
+    margin-top: 10px;
+    display: flex;
+    color: #3E2E8B;
+}
 .list-meeting {
-
+    margin-top: 5px;
+    display: flex;
+    color: #3E2E8B;
+}
+.list-time {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #a3f307;
+}
+.list-delete {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background-size: cover;
+    background-color: transparent;
+    border: 1px solid #a3f307;
+    background-image: url("../../assets/delete_icon.png");
 }
