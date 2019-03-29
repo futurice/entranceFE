@@ -28,7 +28,7 @@ const post = (path, obj) =>
     body: JSON.stringify(obj),
   });
 
-const deleteMeeting = path =>
+const deleteMethod = path =>
   _fetch(path, {
     method: 'delete',
   });
@@ -37,7 +37,7 @@ const deleteMeeting = path =>
 const Meetings = {
   add: meeting => post('/meetings', meeting),
   list: () => get('/meetings'),
-  delete: id => deleteMeeting('/meetings/' + id),
+  delete: id => deleteMethod('/meetings/' + id),
 };
 
 // --- Default Export
