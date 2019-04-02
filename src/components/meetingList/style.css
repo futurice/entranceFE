@@ -8,6 +8,7 @@
 .meeting-list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .list-item {
     position: relative;
