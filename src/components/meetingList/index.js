@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
+import moment from 'moment';
 
 import Api from '../../api';
 
@@ -19,6 +20,7 @@ class MeetingList extends Component {
           {this.props.data.map(u => {
             return (
               <div key={u.meeting} className="list-item">
+                <span className="list-date"> {this.getDay(u.date)} </span>
                 <span className="list-time"> {this.getTime(u.date)} </span>
                 <span className="list-name">{u.host} </span>
                 <span className="list-meeting">{u.meeting} </span>
@@ -36,8 +38,11 @@ class MeetingList extends Component {
     );
   }
 
+  getDay(date) {
+    return moment(date).format('ll');
+  }
   getTime(date) {
-    return date.split('T')[1];
+    return moment(date).format('LT');
   }
 
   deleteMeeting(id) {

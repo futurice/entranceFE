@@ -50,7 +50,7 @@ class AddMeeting extends Component {
             />
           </div>
           <div>
-            <p className="add-meeting-label"> Date/time ? </p>
+            <p className="add-meeting-label"> Date/time? </p>
             <div className="datetime-picker-wrap">
               <TextField
                 id="datetime-local"

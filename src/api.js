@@ -36,7 +36,7 @@ const deleteMethod = path =>
 // --- API Endpoints
 const Meetings = {
   add: meeting => post('/meetings', meeting),
-  list: () => get('/meetings'),
+  list: () => get('/meetings/q/upcoming'),
   delete: id => deleteMethod('/meetings/' + id),
 };
 
