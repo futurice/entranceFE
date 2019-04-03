@@ -44,6 +44,12 @@
     right: 5px;
     color: #2D9E47;
 }
+.list-date {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #2D9E47;
+}
 .list-delete {
     width: 30px;
     height: 30px;
