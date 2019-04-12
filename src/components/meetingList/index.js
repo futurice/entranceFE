@@ -39,10 +39,10 @@ class MeetingList extends Component {
   }
 
   getDay(date) {
-    return moment(date).format('ll');
+    return moment(date).utc().format('ll');
   }
   getTime(date) {
-    return moment(date).format('LT');
+    return moment(date).utc().format('LT');
   }
 
   deleteMeeting(id) {
