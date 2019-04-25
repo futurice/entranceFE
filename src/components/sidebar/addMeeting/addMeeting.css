@@ -1,0 +1,114 @@
+.add-meeting-form {
+  margin: 0 auto;
+}
+
+.add-meeting-head {
+  padding-bottom: 20px;
+}
+
+/* ---------- Box ---------- */
+
+.float-container {
+  box-sizing: border-box;
+  position: relative;
+  flex-direction: row;
+  margin-bottom: 20px;
+  margin-right: 1%;
+}
+
+.float-container input {
+  background-color: #f8f7f9;
+  border: solid 2px #f8f7f9;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: 0;
+  padding: 15px 10px 2px 10px;
+  width: calc(100% - 20px);
+  height: 36px !important;
+}
+
+.float-container input:hover {
+  border: solid 2px #00ad82;
+}
+
+.float-container input:focus {
+  border: solid 2px #00ad82;
+}
+
+/* ---------- Content ---------- */
+
+.float-container label {
+  z-index: 3000;
+  position: absolute;
+  transform-origin: top left;
+  transform: translate(10px, 8px) scale(0.75);
+  /*transform: translate(0, 8px) scale(0.75); 
+      transition: all .1s ease-in-out;*/
+}
+
+/*.float-container.active label {
+    transform: translate(0, 8px) scale(.75);
+}*/
+
+.add-meeting-input {
+  font-size: 16px;
+  color: #200a74;
+  margin: 0;
+}
+
+/* ---------- Datepicker ---------- */
+
+.datetime-picker-wrap {
+  font-size: 16px;
+  color: #200a74;
+  height: 45px;
+  border-radius: 4px;
+  border: 2px solid #f8f7f9;
+  background-color: #f8f7f9;
+}
+
+.MuiFormControl-root-1 {
+  flex-direction: row !important;
+  vertical-align: initial !important;
+  display: contents !important;
+}
+
+.MuiInputBase-root-18 {
+  display: inline !important;
+  color: #200a74 !important;
+  font-size: 16px !important;
+  font-family: system-ui !important;
+}
+
+.MuiInput-underline-9:before {
+  border-bottom: none !important;
+}
+.MuiInput-underline-9:after {
+  border-bottom: none !important;
+}
+
+/* ---------- Button ---------- */
+
+.add-button-wrapper {
+  margin-top: 20px;
+}
+
+.add-meeting-button {
+  text-align: center;
+  width: 100%;
+  min-height: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 0;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #00ad82;
+  color: #fff;
+  border-radius: 4px;
+  border: 0px solid #00ad82;
+}
+
+.add-meeting-button:hover {
+  cursor: pointer;
+  background-color: #008c69;
+}

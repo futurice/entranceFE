@@ -1,0 +1,92 @@
+.container {
+  flex-direction: row;
+  display: flex;
+}
+
+.item_1_4 {
+  width: 20%;
+  margin: 10px;
+  padding-top: 5px;
+}
+
+.meeting-list-wrapper {
+  border-top: 0px solid #fff;
+  padding-top: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.meeting-list-head {
+  margin: 10px;
+  margin-bottom: 20px;
+  width: 40%;
+}
+
+.list-date {
+  position: relative;
+  color: #00ad82;
+  font-size: 16px;
+}
+
+.list-item {
+  font-size: 16px;
+  position: relative;
+  padding: 20px;
+  width: 40%;
+  min-height: 55px;
+  margin: 10px;
+  border-radius: 4px;
+  border: 0px solid #fff;
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.list-host {
+  font-size: 18px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 5px;
+}
+.list-name {
+  margin-top: 20px;
+  display: flex;
+  color: #3e2e8b;
+}
+.list-meeting {
+  margin-top: 15px;
+  display: flex;
+  color: #3e2e8b;
+  font-weight: 600;
+  hyphens: auto;
+}
+
+.list-time {
+  position: relative;
+  color: #200a74;
+  font-weight: 200;
+  max-width: 2%;
+}
+
+.list-delete {
+  opacity: 0.5;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-size: cover;
+  background-color: transparent;
+  border: 0px solid #fff;
+  background-image: url('../../assets/Ico_delete.png');
+}
+
+.list-item:hover .list-delete {
+  opacity: 1;
+  background-image: url('../../assets/Ico_delete_hover.png');
+}
+
+.list-delete:hover {
+  opacity: 1;
+  background-image: url('../../assets/Ico_delete_hover.png');
+  cursor: pointer;
+}
