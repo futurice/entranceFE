@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import MeetingList from './components/meetingList';
-import AddMeeting from './components/addMeeting';
-import Header from './components/header';
+import MeetingList from './components/meetingList/meetingList';
+import Sidebar from './components/sidebar/sidebar';
+import './App.css';
+import Header from './components/sidebar/header/header.js';
 
 import Api from './api';
 
@@ -30,13 +31,15 @@ class App extends Component {
       }
     );
   }
-
   render() {
     return (
-      <div>
-        <Header />
-        <AddMeeting getData={this.fetchData} />
-        <MeetingList data={this.state.data} getData={this.fetchData} />
+      <div className="app-wrapper">
+        <aside>
+          <Sidebar getData={this.fetchData} />
+        </aside>
+        <main>
+          <MeetingList data={this.state.data} getData={this.fetchData} />
+        </main>
       </div>
     );
   }

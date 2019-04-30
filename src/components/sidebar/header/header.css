@@ -1,0 +1,10 @@
+.header-wrapper {
+  margin-bottom: 40px;
+  width: 100%;
+  z-index: 2000;
+}
+
+.header-logo-text {
+  color: #200a74;
+  margin-bottom: 20px;
+}
