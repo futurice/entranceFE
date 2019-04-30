@@ -5,10 +5,6 @@ import moment from 'moment';
 import Api from '../../api';
 
 class MeetingList extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.getData();
   }

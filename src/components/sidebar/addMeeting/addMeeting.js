@@ -5,9 +5,9 @@ import './addMeeting.css';
 import Api from '../../../api';
 
 const FloatingInput = ({ label, id, value, updateMeeting }) => (
-  <div class="float-container">
-    <label for={id}>{label}</label>
-    <input
+  <div className="float-container">
+    <label htmlFor={id}>{label}</label>
+    <TextField
       id={id}
       className="add-meeting-input"
       value={value}
@@ -69,11 +69,8 @@ class AddMeeting extends Component {
             <TextField
               id="datetime-local"
               type="datetime-local"
-              value={this.state.meeting.date}
-              InputLabelProps={{
-                shrink: true,
-              }}
-              onChange={evt => this.updateMeeting(evt)}
+              defaultValue={newDateToString()}
+              onChange={this.updateMeeting}
             />
           </div>
         </div>
@@ -105,6 +102,8 @@ class AddMeeting extends Component {
         break;
       case 'datetime-local':
         meeting.date = evt.target.value;
+        break;
+      default:
         break;
     }
     this.setState({ meeting });

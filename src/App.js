@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import MeetingList from './components/meetingList/meetingList';
 import Sidebar from './components/sidebar/sidebar';
 import './App.css';
-import Header from './components/sidebar/header/header.js';
 
 import Api from './api';
 
