@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import TextField from '@material-ui/core/TextField';
 import './addMeeting.css';
 
 import Api from '../../../api';
@@ -7,7 +6,7 @@ import Api from '../../../api';
 const FloatingInput = ({ label, id, value, updateMeeting }) => (
   <div className="float-container">
     <label htmlFor={id}>{label}</label>
-    <TextField
+    <input
       id={id}
       className="add-meeting-input"
       value={value}
@@ -66,7 +65,7 @@ class AddMeeting extends Component {
 
           <div class="float-container">
             <label>Date and Time?</label>
-            <TextField
+            <input
               id="datetime-local"
               type="datetime-local"
               defaultValue={newDateToString()}
