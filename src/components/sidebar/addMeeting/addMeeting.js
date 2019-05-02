@@ -63,10 +63,11 @@ class AddMeeting extends Component {
             updateMeeting={this.updateMeeting}
           />
 
-          <div class="float-container">
-            <label>Date and Time?</label>
+          <div className="float-container">
+            <label htmlFor="datetime-local">Date and Time?</label>
             <input
               id="datetime-local"
+              max="9999-12-31T23:59"
               type="datetime-local"
               defaultValue={newDateToString()}
               onChange={this.updateMeeting}
