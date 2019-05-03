@@ -1,3 +1,21 @@
 .sidebar-wrapper {
   padding: 15%;
 }
+
+/*Low Resolution Tablets, Mobiles (Landscape)*/
+
+@media (min-width: 481px) and (max-width: 797px) {
+  .sidebar-wrapper {
+    padding-top: 10%;
+  }
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Portrait)*/
+
+@media (max-width: 480px) {
+  .sidebar-wrapper {
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 15%;
+  }
+}

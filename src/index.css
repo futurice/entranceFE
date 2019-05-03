@@ -12,6 +12,7 @@ body {
   background-position: right bottom;
   background-attachment: fixed;
   background-size: 25%;
+  min-width: 150px;
 }
 
 code {
@@ -44,4 +45,60 @@ label {
   font-size: 16px;
   color: #200a74;
   opacity: 0.5;
+}
+
+/*Low Resolution Tablets, Mobiles (Landscape)*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  body {
+    background-size: 50%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  input {
+    font-size: 1.2em;
+  }
+
+  label {
+    font-size: 0.9em;
+  }
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Portrait)*/
+
+@media (max-width: 480px) {
+  body {
+    background-size: 50%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
+  input {
+    font-size: 0.8em;
+  }
+
+  label {
+    font-size: 0.9em;
+  }
 }
