@@ -34,7 +34,8 @@ const deleteMethod = path =>
   });
 
 // --- API Endpoints
-const currentOffice = window.location.pathname;
+const currentOffice =
+  '/' + (window.location.pathname.split('/')[1] || 'munich');
 const Meetings = {
   add: meeting => post(currentOffice + '/meetings', meeting),
   list: () => get(currentOffice + '/meetings/q/upcoming'),
