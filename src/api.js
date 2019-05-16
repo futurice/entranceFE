@@ -34,10 +34,12 @@ const deleteMethod = path =>
   });
 
 // --- API Endpoints
+const currentOffice =
+  '/' + (window.location.pathname.split('/')[1] || 'munich');
 const Meetings = {
-  add: meeting => post('/meetings', meeting),
-  list: () => get('/meetings/q/upcoming'),
-  delete: id => deleteMethod('/meetings/' + id),
+  add: meeting => post(currentOffice + '/meetings', meeting),
+  list: () => get(currentOffice + '/meetings/q/upcoming'),
+  delete: id => deleteMethod(currentOffice + '/meetings/' + id),
 };
 
 // --- Default Export

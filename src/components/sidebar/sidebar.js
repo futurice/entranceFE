@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './sidebar.css';
-import AddMeeting from './addMeeting/addMeeting';
-import Header from './header/header.js';
+import AddMeeting from '../addMeeting/addMeeting';
+import Header from '../header/header';
 
 class Sidebar extends Component {
   render() {
