@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './addMeeting.css';
 
-import Api from '../../../api';
+import Api from '../../api';
 
 const FloatingInput = ({ label, id, value, updateMeeting }) => (
   <div className="float-container">
